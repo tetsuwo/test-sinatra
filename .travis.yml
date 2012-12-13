@@ -1,0 +1,19 @@
+language: ruby
+
+rvm:
+  - 1.9.2
+  - 1.9.3
+
+before_script: 
+  - gem update --system
+  - gem --version
+  - bundle install
+
+script: 
+  - rake test
+
+notifications:
+  email:
+    recipients: tetsuwo.oishi+travis-ci@gmail.com
+    on_success: always # [always|never|change]
+    on_failure: always # [always|never|change]
