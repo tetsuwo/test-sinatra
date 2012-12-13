@@ -1,5 +1,5 @@
 require 'rake/testtask'
 
-task :default => :test
-
-Rake::TestTask.new
+task :default do
+  sh "rake test --trace"
+end
